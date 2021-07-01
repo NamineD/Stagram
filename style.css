@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  h1 {
+    background-color: coral;
+    color: white;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.4em;
+    text-align: center;
+  }
+  header > section {
+    padding: 10px 15px;
+    background-color: bisque;
+    font-size: 0.8em;
+    color: #333;
+  }
+  header a {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid silver;
+    color: #007;
+    text-decoration: none;
+  }
+  header a.important {
+    background-color: #007;
+    color: white;
+  }
+  label {
+    display: inline-block;
+    margin-right: 10px;
+    width: 30%;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  h2 {
+    font-size: 1.2em;
+    color: coral;
+    padding-bottom: 5px;
+    border-bottom: 2px solid coral;
+  }
+  
+  input {
+    display: inline-block;
+    width: 50%;
+  }
+  main {
+    padding: 15px;
+  }
+  
+  button {
+    margin-left: 30%;
+    display: block;
+    width: 60%;
+    background-color: coral;
+    color: #007;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+ 
+ 
+ main > section {
+    display: none; 
+}
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  #timeline figure {
+    margin: 0;
+  }
+  #timeline figcaption {
+    font-weight: bold;
+    color: coral;
+    font-size: 0.7em;
+  }
+  
+  #selfie {
+    margin-left: 20%;
+    margin-top: 20px;
+     display: none; 
+  }
+  
+  #loading {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 40%;
+    left: 40%;
+     display: none; 
+  }

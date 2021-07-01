@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWAGRAM</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDJa92Xz6ztUaQVZjUgnFn77fXnS6Gn9bE",
+            authDomain: "pwa-stagram.firebaseapp.com",
+            projectId: "pwa-stagram",
+            storageBucket: "pwa-stagram.appspot.com",
+            messagingSenderId: "470405445836",
+            appId: "1:470405445836:web:9cad10538bf18453302a69"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    
+<header>
+    <h1>
+        <img src="images/camera.png" width="205" height="105" alt="PWAGram">
+        </h1>
+    <section id="loggedIn">
+        <p>Bienvenido <span id="userName">Usuario</span>.
+            <a href="#" id="lnkPost" class="important">Poner Selfie</a>
+            <a href="#" id="lnkLogOut">Salir</a>
+        </p>
+    </section>
+    <section id="loggedOut">
+        <a href="#" id="lnkLogIn">Ingresar</a>
+        <a href="#" id="lnkSignUp">Registrarse</a>
+    </section>
+</header>
+
+    <img id="loading" src="images/loading.svg" width="20%" alt="Loading"> 
+
+<main>
+    <section id="signup">
+        <h2>Registrar una nueva cuenta</h2>
+        <form onsubmit="return false">
+            <label for="label">Nombre</label>
+            <input id="name" placeholder="Enter your full name" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" required>
+            <label for="pass">Password</label>
+            <input id="pass" type="password" required>
+            <label for="pass2">Confirm Pass</label>
+            <input id="pass2" type="password" required>
+            <button id="btnSignUp">Registrar</button>
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Entra a tu cuenta</h2>
+        <form onsubmit="return false">
+            <label for="emailLogin">Email</label>
+            <input id="emailLogin" type="email" required>
+            <label for="passLogin">Password</label>
+            <input id="passLogin" type="password" required>
+            <button id="btnLogIn">Entrar</button>
+        </form>
+    </section>
+
+    <section id="post">
+        <h2>Agregar Selfie</h2>
+        <form onsubmit="return false;">
+            <label for="picture">Tomar Selfie</label>
+            <input id="picture" type="file" accept="image/*" capture="user">
+
+            <section id="selfie">
+                <img id="selfieImage" alt="Your Selfie" width="70%">
+                <select id="filter">
+                    <option value="">Sin filtro</option>
+                    <option value="grayscale()">Escala de Grises</option>
+                    <option value="saturate(3)">Coleres</option>
+                    <option value="sepia()">Retro</option>
+                    <option value="brightness(1.5)">Claras</option>
+                    <option value="brightness(0.5)">Oscuras</option>
+                    <option value="invert()">Invertir colores</option>
+                </select>
+                <button id="btnPostSelfie">Agregar Selfie</button>
+            </section>
+        </form>
+    </section>
+
+    <section id="timeline">
+        <h2>ITSelfie Historia</h2>
+        <ul></ul>
+    </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+</body>
+</html>
