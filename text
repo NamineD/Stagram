@@ -1,0 +1,10 @@
+git init (Crea el repositorio local para el proyecto)
+
+git config --global user.name "Daiana"
+git config --global user.email bridaichocolate12@gmail.com
+
+git status (nos dice el estado de los archivos)
+
+git add nombreArchivo.ext (agrega el archivo al stage)
+
+git commit -m "Primer commit"
