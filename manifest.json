@@ -1,12 +1,12 @@
 {
-  "name": "PWA-Stagram",
+  "name": "PWA Photos Stagram",
   "short_name": "PWAStagram",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "theme_color": "#ff7f50",
+  "background_color": "#ffbfa7",
   "display": "browser",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

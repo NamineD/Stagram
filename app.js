@@ -41,6 +41,8 @@ const clearSecctions = () => {
     for(let section of sections){
         section.style.display = 'none'
     }
+    let timeline = document.querySelector('#timeline')
+    timeline.style.display = 'block'
 }
 
 const activateLoggedIn = () =>{
@@ -150,7 +152,7 @@ btnPostSelfie.addEventListener('click', () => {
                 user: firebase.auth().currentUser.displayName,
                 filter: filterValue
             })
-            alert('Posted selfie')
+            swal('Posted selfie')
             clearSecctions()
             
         })
@@ -158,7 +160,29 @@ btnPostSelfie.addEventListener('click', () => {
 })
 
 function updateTimeLine(){
-    
+    let ul = document.querySelector('#timeline ul')
+    ul.innerHTML = '';
+
+    let db = firebase.database().ref('pwastagram')
+    let list = db.limitToLast(100)
+    list.on('child_added', (child) =>{
+        let photo = child.val()
+
+        let storageRef = firebase.storage().ref()
+        let imgRef = storageRef.child(photo.path)
+        imgRef.getDownloadURL()
+            .then( (url) =>{
+                let li = `
+                    <li>
+                        <figure>
+                            <img src='${url}' width='100%' alt='MyPicture' style='filter: ${photo.filter}' >
+                            <figcaption> De ${photo.user} </figcaption>
+                        </figure>
+                    </li>
+                `
+                ul.innerHTML += li
+            })
+    })
 }
 
 
